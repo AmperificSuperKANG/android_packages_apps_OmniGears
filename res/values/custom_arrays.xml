@@ -78,7 +78,7 @@
         <item>@string/auto_brightness_sensitivity_veryhigh</item>
     </string-array>
 
-    <string-array name="auto_brightness_sensitivity_values">
+    <string-array name="auto_brightness_sensitivity_values" translatable="false">
         <item>150</item>
         <item>125</item>
         <item>100</item>
@@ -146,6 +146,24 @@
         <item>18000000</item>
     </string-array>
 
+    <string-array name="ad_threshold_entries" translatable="false">
+        <item>@string/ad_threshold_0s</item>
+        <item>@string/ad_threshold_1s</item>
+        <item>@string/ad_threshold_2s</item>
+        <item>@string/ad_threshold_3s</item>
+        <item>@string/ad_threshold_4s</item>
+        <item>@string/ad_threshold_5s</item>
+    </string-array>
+
+    <string-array name="ad_threshold_values" translatable="false">
+        <item>0</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+    </string-array>
+
     <string-array name="ad_timeout_entries" translatable="false">
         <item>@string/ad_timeout_3s</item>
         <item>@string/ad_timeout_5s</item>
@@ -190,7 +208,7 @@
         <item>3</item>
     </string-array>
 
-    <string-array name="button_volume_default_entries" translatbale="false">
+    <string-array name="button_volume_default_entries" translatable="false">
         <item>@string/button_volume_default_none</item>
         <item>@string/button_volume_default_media</item>
         <item>@string/button_volume_default_ringer</item>
