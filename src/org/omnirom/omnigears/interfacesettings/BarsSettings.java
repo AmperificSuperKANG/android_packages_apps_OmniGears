@@ -24,6 +24,7 @@ import com.android.settings.R;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceGroup;
@@ -31,6 +32,7 @@ import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
+import android.view.WindowManagerGlobal;
 
 public class BarsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -40,6 +42,8 @@ public class BarsSettings extends SettingsPreferenceFragment implements
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
     private static final String STATUS_BAR_TRAFFIC = "status_bar_traffic";
     private static final String STATUS_BAR_NETWORK_ACTIVITY = "status_bar_network_activity";
+
+    private static final String CATEGORY_NAVBAR = "category_navigation_bar";
 
     private CheckBoxPreference mStatusBarBrightnessControl;
     private CheckBoxPreference mStatusBarNotifCount;
@@ -82,11 +86,18 @@ public class BarsSettings extends SettingsPreferenceFragment implements
             Settings.System.STATUS_BAR_NETWORK_ACTIVITY, 0) == 1);
         mStatusBarNetworkActivity.setOnPreferenceChangeListener(this);
         mStatusBarNetworkActivity.setOnPreferenceChangeListener(this);
+
+        boolean hasNavBar = getResources().getBoolean(com.android.internal.R.bool.config_showNavigationBar);
+        // Hide navigation bar category on devices without navigation bar
+        if (!hasNavBar) {
+            prefSet.removePreference(findPreference(CATEGORY_NAVBAR));
+        }
     }
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        return true;
+        // If we didn't handle it, let preferences handle it.
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -108,7 +119,6 @@ public class BarsSettings extends SettingsPreferenceFragment implements
         } else {
             return false;
         }
-
         return true;
     }
 }

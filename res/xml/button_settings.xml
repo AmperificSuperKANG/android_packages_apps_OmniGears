@@ -39,7 +39,7 @@
             android:key="button_volume_wake_screen"
             android:title="@string/button_volume_wake_title"
             android:summary="@string/button_volume_wake_summary"
-            android:defaultValue="false" />
+            android:persistent="false"/>
 
         <ListPreference
             android:key="button_volume_default_screen"
@@ -47,7 +47,7 @@
             android:summary="@string/button_volume_default_summary"
             android:entries="@array/button_volume_default_entries"
             android:entryValues="@array/button_volume_default_values"
-            android:defaultValue="0" />
+            android:persistent="false"/>
 
     </PreferenceCategory>
 
@@ -58,7 +58,6 @@
         <SwitchPreference
             android:key="keys_enable_custom"
             android:title="@string/keys_enable_custom_title"
-            android:defaultValue="false"
             android:persistent="false" />
     </PreferenceCategory>
    
@@ -185,6 +184,18 @@
             android:entryValues="@array/keys_action_values"
             android:persistent="false"
             android:dependency="keys_enable_custom" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="button_headsethook"
+        android:title="@string/button_headsethook_title" >
+
+        <CheckBoxPreference
+            android:key="button_headsethook_launch_voice"
+            android:title="@string/button_headsethook_launch_voice_title"
+            android:summary="@string/button_headsethook_launch_voice_summary"
+            android:persistent="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
