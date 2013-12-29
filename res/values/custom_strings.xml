@@ -200,6 +200,8 @@
     <string name="keys_action_double">Double tap</string>
     <string name="dialog_no_home_key_title">No home action</string>
     <string name="no_home_key">You have no button assigned to the \"Home\" action! This can make your device unusable!</string>
+    <string name="virtual_key_haptic_feedback_title">Vibrate on touch</string>
+    <string name="virtual_key_haptic_feedback_summary">Enable depends on \"Vibrate on touch\" in sound settings</string>
 
     <!-- Power Menu Options-->
     <string name="bars_and_menus_category_power_menu_title">Power menu</string>
@@ -207,6 +209,12 @@
     <string name="power_menu_toggle_screenshot_summary">Show screenshot option in Power Menu</string>
     <string name="power_menu_toggle_screenrecord_title">Screen Record</string>
     <string name="power_menu_toggle_screenrecord_summary">Show screen Record option in Power Menu</string>
+    <string name="power_menu_toggle_mobile_data_title">Mobile Data</string>
+    <string name="power_menu_toggle_mobile_data_summary">Show Mobile Data option in Power Menu</string>
+    <string name="power_menu_toggle_airplane_mode_title">Airplane mode</string>
+    <string name="power_menu_toggle_airplane_mode_summary">Show Airplane option in Power Menu</string>
+    <string name="power_menu_toggle_sound_toggles_title">Sound toggles</string>
+    <string name="power_menu_toggle_sound_toggles_summary">Show sound toggles in Power Menu</string>
 
     <!-- Active Display Notifications -->
     <string name="ad_settings_title">Active display</string>
@@ -353,4 +361,7 @@
     <string name="icon_picker_sms">Messaging</string>
     <string name="icon_picker_twitter">Twitter</string>
 
+    <!-- Status Bar QS Quick pulldown -->
+    <string name="qs_quick_pulldown_title">Quick Settings pulldown</string>
+    <string name="qs_quick_pulldown_summary">Access Quick Settings by pulling down on the right side of the status bar</string>
 </resources>
