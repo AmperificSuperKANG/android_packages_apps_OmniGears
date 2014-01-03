@@ -151,8 +151,10 @@
 
     <!-- button settings -->
     <string name="button_volume_keys_title">Volume</string>
-    <string name="button_volume_wake_title">Volume button wake</string>
-    <string name="button_volume_wake_summary">Pressing a volume button will wake your device</string>
+    <string name="button_volume_wake_title">Button wake</string>
+    <string name="button_volume_wake_summary">Pressing a volume button will wake the device</string>
+    <string name="button_volume_music_control_title">Music control</string>
+    <string name="button_volume_music_control_summary">Long press volume buttons to switch tracks while screen off</string>
     <string name="button_headsethook_title">Headset</string>
     <string name="button_headsethook_launch_voice_title">Headset launches voice</string>
     <string name="button_headsethook_launch_voice_summary">Pressing the headset button will launch voice controls</string>
@@ -361,7 +363,17 @@
     <string name="icon_picker_sms">Messaging</string>
     <string name="icon_picker_twitter">Twitter</string>
 
-    <!-- Status Bar QS Quick pulldown -->
-    <string name="qs_quick_pulldown_title">Quick Settings pulldown</string>
-    <string name="qs_quick_pulldown_summary">Access Quick Settings by pulling down on the right side of the status bar</string>
+    <!-- QuickSettings: Quick Pulldown -->
+    <string name="title_quick_pulldown">Quick pulldown</string>
+    <string name="summary_quick_pulldown">Quickly pulldown quicksettings with one finger</string>
+    <string name="quick_pulldown_off">Off</string>
+    <string name="quick_pulldown_centre">Centre</string>
+    <string name="quick_pulldown_left">Left</string>
+    <string name="quick_pulldown_right">Right</string>
+
+    <!-- Cursor control -->
+    <string name="volume_key_cursor_control_title">Cursor control</string>
+    <string name="volume_key_cursor_control_on">Left/right</string>
+    <string name="volume_key_cursor_control_on_reverse">Right/left</string>
+
 </resources>
